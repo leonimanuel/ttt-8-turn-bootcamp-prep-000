@@ -37,13 +37,20 @@ end
 
 def turn(board)
   player = "X"
-  puts "Please enter 1-9:"
-  user_input = gets.strip
-  index = input_to_index(user_input)
-  move_valid = valid_move?(board, index)
-  if !move_valid
-    turn(board)
+  i = 0
+  while i < 9
+    puts "Please enter 1-9:"
+    user_input = gets.strip
+    index = input_to_index(user_input)
+    move_valid = valid_move?(board, index)
+    if !move_valid
+      turn(board)
+    end
+    move(board, index, player)
+    puts display_board(board)
+    if player == "X"
+      player = "O"
+    else player = "X"
+    end
   end
-  move(board, index, player)
-  puts display_board(board)
 end
