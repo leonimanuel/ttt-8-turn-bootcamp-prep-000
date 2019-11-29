@@ -31,7 +31,8 @@ end
 # position_taken?([" ", " ", " ", " ", "X", " ", " ", " ", " "], 4)
 # valid_move?([" ", " ", "X", " ", "X", " ", " ", " ", " "], 2)
 
-def move(board, index, player)
+def move(board, index)
+  player = "X"
   board[index] = player
 end
 
