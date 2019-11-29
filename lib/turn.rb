@@ -44,5 +44,5 @@ def turn(board)
   if !move_valid
     turn(board)
   end
-  # move(board, index, player)
+  move(board, index)
 end
